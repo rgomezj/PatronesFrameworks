@@ -1,7 +1,9 @@
 package Abstract;
-import Entities.CreditCard;
-import Entities.PizzaOrder;
+import Entities.ChargeResult;
 
 public interface TransactionLog {
-	void logOrder(CreditCard card, PizzaOrder order);
+	
+	void logChargeResult(ChargeResult charge);
+	
+	void logConnectException(UnreachableException charge);
 }
