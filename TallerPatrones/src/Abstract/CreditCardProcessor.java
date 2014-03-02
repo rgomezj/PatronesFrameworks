@@ -1,6 +1,7 @@
 package Abstract;
+import Entities.ChargeResult;
 import Entities.CreditCard;
 
 public interface CreditCardProcessor {
-	 void processCard(CreditCard card);
+	ChargeResult charge(CreditCard card, Double amount) throws UnreachableException;
 }

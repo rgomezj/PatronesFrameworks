@@ -4,16 +4,16 @@ import java.sql.Date;
 
 public class PizzaOrder {
 
-	private double total;
+	private double amount;
 	private Date orderDate;
 
 	
-	public double getTotal() {
-		return total;
+	public double getAmount() {
+		return amount;
 	}
 
-	public void setTotal(double total) {
-		this.total = total;
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 
 	public Date getOrderDate() {
