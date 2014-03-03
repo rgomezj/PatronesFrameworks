@@ -24,7 +24,7 @@ public class pizzasApp {
 		 pizza.setOrderDate(new Date());
 		 
 		 CreditCard credit = new CreditCard();
-		 credit.setNumber("123");
+		 credit.setNumber("");
 		 credit.setDueMonth(12);
 		 credit.setDueYear(2016);
 		 credit.setFullName("Roger Gomez Jaramillo");

@@ -24,7 +24,7 @@ public class Receipt {
 	public static Receipt forSystemFailure(String exceptionMessage)
 	{
 		Receipt receipt = new Receipt();
-		receipt.message = "Order declined. Reason:" + exceptionMessage;
+		receipt.message = "Order not processed. Reason:" + exceptionMessage;
 		return receipt;
 	}
 }
