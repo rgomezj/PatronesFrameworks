@@ -3,6 +3,8 @@ import Abstract.CreditCardProcessor;
 import Abstract.TransactionLog;
 import Concrete.DatabaseTransactionLog;
 import Concrete.PaypalCreditCardProcessor;
+import Concrete.RealBillingService;
+
 import com.google.inject.AbstractModule;
 
 public class BillingModule extends AbstractModule {
