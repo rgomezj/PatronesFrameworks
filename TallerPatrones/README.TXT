@@ -1,0 +1,1 @@
+1.El proyecto se ejecuta desde la clase pizzasApp ubicada en el paquete por defecto del proyecto (Default package)
