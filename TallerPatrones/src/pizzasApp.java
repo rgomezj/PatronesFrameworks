@@ -18,21 +18,42 @@ public class pizzasApp {
 	     * main() method.
 	     */
 		 Injector injector = Guice.createInjector(new BillingModule());
-
+		 
 		 PizzaOrder pizza = new PizzaOrder();
 		 pizza.setAmount(45000);
 		 pizza.setOrderDate(new Date());
 		 
 		 CreditCard credit = new CreditCard();
-		 credit.setNumber("");
+		 credit.setCountryName("England");
+		 credit.setNumber("123");
 		 credit.setDueMonth(12);
 		 credit.setDueYear(2016);
-		 credit.setFullName("Roger Gomez Jaramillo");
+		 credit.setFullName("");
 		 
 	    BillingService billingService = injector.getInstance(BillingService.class);
 	    Receipt receipt = billingService.chargeOrder(pizza, credit);
-	    System.out.println(receipt.getMessage());
+	    System.out.println("Master card:" + receipt.getMessage());
 	    
+	    CreditCard creditCardVisa = new CreditCard();
+	    creditCardVisa.setCountryName("Colombia");
+	    creditCardVisa.setNumber("");
+	    creditCardVisa.setDueMonth(12);
+	    creditCardVisa.setDueYear(2016);
+	    creditCardVisa.setFullName("Roger Gomez Jaramillo");
+	    
+	    receipt = billingService.chargeOrder(pizza, creditCardVisa);
+	    System.out.println("Visa Card:" + receipt.getMessage());
+	    
+	    CreditCard creditCardPaypal = new CreditCard();
+	    creditCardPaypal.setCountryName("");
+	    creditCardPaypal.setNumber("");
+	    creditCardPaypal.setDueMonth(12);
+	    creditCardPaypal.setDueYear(2016);
+	    creditCardPaypal.setFullName("Roger Gomez Jaramillo");
+	    
+	    receipt = billingService.chargeOrder(pizza, creditCardPaypal);
+	    System.out.println("Paypal Card:" + receipt.getMessage());
+		
 	}
 
 }

@@ -6,6 +6,7 @@ public class CreditCard {
 	private String fullName;
 	private int dueYear;
 	private int dueMonth;
+	private String countryName;
 	
 	public String getNumber() {
 		return number;
@@ -37,5 +38,13 @@ public class CreditCard {
 
 	public void setDueMonth(int dueMonth) {
 		this.dueMonth = dueMonth;
-	} 
+	}
+	
+	public String getCountryName() {
+		return countryName;
+	}
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
 }
